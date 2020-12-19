@@ -1,0 +1,78 @@
+html, body {
+  font: 16pt arial;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.bar {
+    fill: #5f89ad;
+}
+
+.axis {
+    font-size: 13px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
+
+.label {
+    font-size: 13px;
+}
+
+#graphic-container {
+  height: 500px;
+  width: 100%;
+  overflow: scroll;
+}
+
+#viz {
+  width: 900px;
+  height: 700px;
+  border: 1px solid lightgray;
+  font: 22pt arial;
+}
+
+table, th, td {
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.tick {
+  overflow: visible;
+}
+
+#sentiment {
+  width: 100%;
+}
+
+h3.sentiment {
+  text-align: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splitscreen {
+  display:flex;
+}
+.splitscreen .left {
+  flex: 1;
+}
+.splitscreen .right {
+  flex: 1;
+}
+.Episode_Desc{
+  height: 560px;
+  overflow-y:auto;
+}
