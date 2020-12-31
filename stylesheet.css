@@ -37,15 +37,6 @@ body {
   font: 22pt arial;
 }
 
-table, th, td {
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-}
-
 .tick {
   overflow: visible;
 }
@@ -54,13 +45,8 @@ th, td {
   width: 100%;
 }
 
-h3.sentiment {
+h2.sentiment {
   text-align: center;
-}
-
-table {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .splitscreen {
@@ -75,4 +61,93 @@ table {
 .Episode_Desc{
   height: 560px;
   overflow-y:auto;
+}
+
+body {
+  background-color: #94ADFF;
+}
+
+#title-bar {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F5D276;
+}
+
+.right {
+  margin: 10px;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: #F5D276;
+  border-radius: 5px;
+}
+
+.left {
+  margin: 10px;
+  margin-right: 5px;
+  padding: 10px;
+  background-color: #F5D276;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+#info {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#info div {
+  padding: 5px;
+  font-size: 20pt;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/*
+  I totally made wrote code and didn't take it from W3Schools
+  https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip
+*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btm-bdr {
+  border-bottom: 1px solid black;
+}
+
+.grid span div {
+  padding: 15px;
+  font-size: 22pt;
 }

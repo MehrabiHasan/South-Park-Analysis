@@ -142,7 +142,9 @@
         },
         success: function(rv) {
           let obj = JSON.parse(rv);
-          $("#sentiment-display").html(`<td>${obj[2]}</td><td>${obj[3]}</td><td>${obj[4]}</td>`);
+          $("#sentiment-mean").html(obj[2]);
+          $("#sentiment-stdev").html(obj[3]);
+          $("#sentiment-var").html(obj[4]);
         }
       });
     }

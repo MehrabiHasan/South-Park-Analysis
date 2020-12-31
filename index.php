@@ -26,6 +26,13 @@
 <body onload="draw()">
   <!-- This is the title and description of the webpage -->
   <div id="title-bar">
+		<div style="float: right;" class="tooltip">
+			help
+			<span class="tooltiptext">
+				This is the explainer text
+				<!-- TODO: add actual explainer text -->
+			</span>
+		</div>
     <h1>South Park Social Network Analysis</h1>
     <p>This is an application that can create graphic diagram of Social Network for each southpark episode</p>
   </div>
@@ -34,12 +41,17 @@
     <div class="left">
       <div id="viz">
       </div>
-			<div>
-				Number of elements: <span id="num_elements"></span>
-				Number of connections: <span id="num_connections"></span>
-				Average Degree: <span id="avg_connections"></span>
-				Maximum Degree: <span id="max_connections"></span>
-				Minimum Degree: <span id="min_connections"></span>
+			<div id="info">
+				<div>Number of elements</div>
+				<div id="num_elements"></div>
+				<div>Number of connections</div>
+				<div id="num_connections"></div>
+				<div>Average Degree</div>
+				<div id="avg_connections"></div>
+				<div>Maximum Degree</div>
+				<div id="max_connections"></div>
+				<div>Minimum Degree</div>
+				<div id="min_connections"></div>
 			</div>
     </div>
     <!-- This is the RIGHT side of the application -->
@@ -114,16 +126,20 @@
        </div>
 
        <div id="sentiment">
-         <h3 class="sentiment">Sentiment</h3>
-         <table>
-           <tr>
-             <th>Mean</th>
-             <th>St. Dev</th>
-             <th>Var</th>
-           </tr>
-           <tr id="sentiment-display">
-
-           </tr>
+         <h2 class="sentiment">Sentiment</h2>
+         <div class="grid">
+             <span>
+							 <div class="btm-bdr">Mean</div>
+							 <div id="sentiment-mean"></div>
+						 </span>
+             <span>
+							 <div class="btm-bdr">St. Dev</div>
+							 <div id="sentiment-stdev"></div>
+						 </span>
+             <span>
+							 <div class="btm-bdr">Var</div>
+							 <div id="sentiment-var"></div>
+						 </span>
          </table>
        </div>
      </div>
