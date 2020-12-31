@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d751713988987e9331980363e24189ce",
-    "packages": [],
+    "content-hash": "069d8b24418e1d81e029073bb16fde5b",
+    "packages": [
+        {
+            "name": "stefanak-michal/bolt",
+            "version": "v2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stefanak-michal/Bolt.git",
+                "reference": "6a6cad25bb9c8b6112c9db68e0c51e6390df123b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stefanak-michal/Bolt/zipball/6a6cad25bb9c8b6112c9db68e0c51e6390df123b",
+                "reference": "6a6cad25bb9c8b6112c9db68e0c51e6390df123b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-sockets": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=7.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michal Stefanak",
+                    "homepage": "https://www.linkedin.com/in/michalstefanak/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bolt protocol library over TCP socket",
+            "homepage": "https://github.com/stefanak-michal/Bolt",
+            "keywords": [
+                "Socket",
+                "bolt",
+                "database",
+                "neo4j"
+            ],
+            "support": {
+                "issues": "https://github.com/stefanak-michal/Bolt/issues",
+                "source": "https://github.com/stefanak-michal/Bolt"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/MichalStefanak",
+                    "type": "paypal"
+                }
+            ],
+            "time": "2020-12-03T10:35:44+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",

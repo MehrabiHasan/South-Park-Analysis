@@ -6,6 +6,26 @@
         return context.measureText(text).width;
     }
 
+    function setSummary(p_episode, p_season) {
+      $.ajax({
+        url: 'ajax_functions.php',
+        type: 'POST',
+        data: {
+          'action': 'getQuery',
+          'season': p_season,
+          'episode': p_episode
+        },
+        success: function(rv) {
+          let obj = JSON.parse(rv);
+          $("#num_elements").html(obj[0][0]);
+          $("#num_connections").html(obj[0][1]);
+          $("#avg_connections").html(obj[0][2]);
+          $("#max_connections").html(obj[0][3]);
+          $("#min_connections").html(obj[0][4]);
+        }
+      });
+    }
+
     // PRE: p_season is a season number and p_episode is an episode number in that season
     // POST: does an ajax request to get the occurences of names in that season
     function getCleanedNames(p_season, p_episode) {
@@ -167,4 +187,11 @@
       getSetimentGrouping(season, episode);
       getCleanedNames(season, episode);
     });
-  
+
+    $(document).on("click", "#reload", function() {
+      setSummary(episode, season);
+    });
+
+    $(document).ready(function() {
+      setSummary(episode, season);
+    });

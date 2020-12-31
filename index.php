@@ -1,4 +1,5 @@
 <?php
+	require __DIR__ . '/vendor/autoload.php';
   $json = file_get_contents("episode_data.json");
 ?>
 
@@ -33,6 +34,13 @@
     <div class="left">
       <div id="viz">
       </div>
+			<div>
+				Number of elements: <span id="num_elements"></span>
+				Number of connections: <span id="num_connections"></span>
+				Average Degree: <span id="avg_connections"></span>
+				Maximum Degree: <span id="max_connections"></span>
+				Minimum Degree: <span id="min_connections"></span>
+			</div>
     </div>
     <!-- This is the RIGHT side of the application -->
     <div class="right">
